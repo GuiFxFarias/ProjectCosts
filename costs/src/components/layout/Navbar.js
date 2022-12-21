@@ -18,10 +18,10 @@ function Navbar() {
             <Link to={"/Projects"}>Projects</Link>
           </li>
           <li className="item">
-            <Link to={"/Contato"}>Contact</Link>
+            <Link to={"/Empresa"}>Company</Link>
           </li>
           <li className="item">
-            <Link to={"/Empresa"}>Company</Link>
+            <Link to={"/Contato"}>Contact</Link>
           </li>
         </ul>
       </Container>

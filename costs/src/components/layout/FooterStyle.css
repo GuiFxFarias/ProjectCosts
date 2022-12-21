@@ -1,0 +1,35 @@
+.footer{
+    background-color: #222;
+    color: #fff;
+    padding: 3em;
+    text-align: center;
+}
+
+.listFa{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.listFa li{
+    margin: 0 1em;
+}
+  
+
+.listFa li svg{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.listFa li svg:hover{
+    color: #fb3;
+}
+
+.copyRight{
+    margin-top: 2em;
+}
+
+.copyRight span{
+    font-weight: bold;
+    color: #fb3;
+}
