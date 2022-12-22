@@ -6,11 +6,11 @@ import Select from "../form/Select";
 import SubmitButton from "../form/SubmitButton";
 
 function ProjectForm({ btnText }) {
-  const [categories, setCategories] = useState([]);
+  let [categories, setCategories] = useState([]);
 
   useEffect(() => {
     // Pegando direto do 'Banco de dados'
-    fetch("https://localhost:5000/categories", {
+    fetch("http://localhost:5000/categories", {
       method: "GET",
       headres: {
         "Content-Type": "application/json",
@@ -21,37 +21,32 @@ function ProjectForm({ btnText }) {
         setCategories = data;
       })
       .catch((erro) => console.log(erro));
-    // Pegando direto do 'Banco de dados'
   }, []);
+  // Pegando direto do 'Banco de dados'
 
   return (
     <form className="form">
-      <div>
-        <Input
-          type="text"
-          txt="Nome do projeto"
-          name="name"
-          placeholder="Insira o nome do projeto"
-        ></Input>
-      </div>
-      <div>
-        <Input
-          type="number"
-          txt="Orçamento do projeto"
-          name="budget"
-          placeholder="Insira o orçamento total"
-        ></Input>
-      </div>
-      <div>
-        <Select
-          name="categoryId"
-          txt="Selecione uma categoria"
-          options={categories}
-        ></Select>
-      </div>
-      <div>
-        <SubmitButton text={btnText}></SubmitButton>
-      </div>
+      <Input
+        type="text"
+        txt="Nome do projeto"
+        name="name"
+        placeholder="Insira o nome do projeto"
+      ></Input>
+
+      <Input
+        type="number"
+        txt="Orçamento do projeto"
+        name="budget"
+        placeholder="Insira o orçamento total"
+      ></Input>
+
+      <Select
+        name="categoryId"
+        txt="Selecione uma categoria"
+        options={categories}
+      ></Select>
+
+      <SubmitButton text={btnText}></SubmitButton>
     </form>
   );
 }
