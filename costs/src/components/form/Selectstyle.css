@@ -1,21 +1,16 @@
-.formControl{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-    
+.formControl {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
 }
 
-.formControl label{
-    margin-bottom: 1em;
-    font-weight: bold;
+.formControl label {
+  margin-bottom: 0.6em;
+  font-weight: bold;
 }
 
-.formControl input{
-    padding: .7em;
-    border-radius: 0;
-    border: none;
-}
-
-.formControl input::placeholder{
-    color: #7b7b7b;
+.formControl select {
+  padding: 0.7em;
+  border-radius: 0;
+  border: none;
 }
